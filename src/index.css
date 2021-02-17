@@ -24,18 +24,42 @@
   line-height: 1;
   cursor: default;
   overflow-y: hidden;
-  text-align: left;
-  color: #4E5356;
+  text-align: right;
 }
 
-p {
+p, li {
   font-family: droid-sans-mono, monospace;
   font-weight: 400;
   font-style: normal;
-  font-size: 50px;
+  font-size: 15px;
 }
 
-/* ########################### HOME ############################*/
+a.nav-link {
+  color: black;
+}
+
+a.nav-link:hover {
+  color: black;
+}
+
+li {
+  display: list-item;
+  overflow-x: visible;
+  padding-bottom: 10px;
+}
+
+ul {
+  list-style-position: outside !important;
+  padding-left: 1em;
+  margin-left: 1em;
+  overflow-x: visible;
+}
+
+ul li::marker {
+  color: black;
+}
+
+/* ########################### HOME ############################ */
 .categoryHeader {
   width: 100%;
   font-family: forma-djr-micro, sans-serif;
@@ -88,7 +112,7 @@ p {
 
 .homeLink {
   position: relative;
-  width: 80%;
+  width: 95%;
   height: 100%;
   display: flex;
   flex-direction: row;
@@ -176,4 +200,92 @@ p {
 }
 */
 
+/* ########################### PAGE ############################ */
 
+.nav {
+  width: 100%;
+}
+
+.tab-content {
+  width: 100%;
+}
+
+.nav-item {
+  margin-bottom: 5px;
+}
+
+.customPill.nav-link.active {
+  background-color: black !important;
+}
+
+.customPill.nav-link:hover {
+  box-shadow: inset -1px 0 0 black, inset 0 -1px 0 black, inset 1px 0 0 black, inset 0 1px 0 black;
+}
+
+.pageContainer {
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+.innerPageContainer {
+  width: 100%;
+  max-width: 1150px;
+  padding: 25px;
+}
+
+.pageTitle {
+  max-width: 50vw;
+  font-family: forma-djr-banner, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 7vw;
+  line-height: 1;
+  cursor: default;
+  overflow-y: hidden;
+}
+
+.pageSubtitle {
+  font-family: droid-sans-mono, monospace;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 2vw;
+  line-height: 1.3;
+  cursor: default;
+  overflow-y: hidden;
+}
+
+.pageHeading {
+  font-family: forma-djr-banner, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 20px;;
+  line-height: 1.1;
+}
+
+.tabHeading {
+  font-family: forma-djr-banner, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 30px;;
+  line-height: 1.1;
+  padding: 15px;
+}
+
+
+.tabContainer {
+  width: 100%;
+  padding: 25px;
+}
+
+.rowPadder {
+  height: 50px;
+}
+
+.underline {
+  text-decoration: underline;
+}
