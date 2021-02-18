@@ -7,6 +7,8 @@ import Home from "./components/Home";
 import OOP from "./components/fundamentals/OOP";
 import Algorithms from './components/fundamentals/Algorithms';
 
+import Python from './components/languages/Python';
+
 function App() {
   return (
     <Router>
@@ -23,6 +25,11 @@ function App() {
       <Route exact path="/algorithms" render={props => (
         <React.Fragment>
           <Algorithms />
+        </React.Fragment>
+      )} />
+      <Route exact path="/python" render={props => (
+        <React.Fragment>
+          <Python />
         </React.Fragment>
       )} />
     </Router>
