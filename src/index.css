@@ -59,6 +59,10 @@ ul li::marker {
   color: black;
 }
 
+.nav-tabs {
+  overflow-y: hidden;
+}
+
 /* ########################### HOME ############################ */
 .categoryHeader {
   width: 100%;
@@ -155,6 +159,64 @@ ul li::marker {
   bottom: 0px;
 }
 
+.aboutContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 20px;
+  height: 300px;
+}
+
+.aboutContainer.left {
+  align-items: flex-end;
+  text-align: left;
+}
+
+.aboutFont {
+  font-family: droid-sans-mono, monospace;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 1.5;
+  color: black;
+}
+
+.aboutFont.left {
+  text-align: left;
+}
+
+
+.smallTitleContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+  padding: 25px;
+  height: 300px;
+  background-color: black;
+  border-radius: 5px;
+}
+
+.smallTitleOuterContainer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.smallTitleOuterContainer.right {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.smallTitle {
+  font-family: forma-djr-banner, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 5vw;
+  line-height: 1;
+  text-align: center;
+  color: white;
+}
 /*
 @media only screen and (max-width: 768px) {
   .linkContainer.empty {

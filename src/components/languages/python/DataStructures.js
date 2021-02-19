@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Row, Col } from 'react-bootstrap';
+import { Container, Row, Col, Nav, Tab } from 'react-bootstrap';
 
 export default function DataStructures() {
 
@@ -91,59 +91,86 @@ for key, val in filledDict.items():
                 <Row>
                     <h2 className="tabHeading">Data Structures</h2>
                 </Row>
-                <Row>
-                    <Col md={6}>
-                        <h3 className="pageHeading">
-                            Lists:
-                        </h3>
-                        <Row>
-                            <p className="sampleHeader">Basics:</p>
-                            <pre className="codeSample">
-                                <code>{listSample}</code>
-                            </pre>
-                        </Row>
-                        <Row>
-                            <p className="sampleHeader">Methods:</p>
-                            <pre className="codeSample">
-                                <code>{listMethods}</code>
-                            </pre>
-                        </Row>
-                        <Row>
-                            <p className="sampleHeader">Slicing:</p>
-                            <pre className="codeSample">
-                                <code>{listSlicing}</code>
-                            </pre>
-                        </Row>
-                        <Row>
-                            <p className="sampleHeader">Iterating:</p>
-                            <pre className="codeSample">
-                                <code>{listIterate}</code>
-                            </pre>
-                        </Row>
-                        <Row>
-                            <p className="sampleHeader">Map/Filter/Reduce:</p>
-                            <pre className="codeSample">
-                                <code>{listmfr}</code>
-                            </pre>
-                        </Row>
-                    </Col>
-
-                    <Col md={6}>
-                        <h3 className="pageHeading">Dicts:</h3>
-                        <Row>
-                            <p className="sampleHeader">Basics:</p>
-                            <pre className="codeSample">
-                                <code>{dictSample}</code>
-                            </pre>
-                        </Row>
-                        <Row>
-                            <p className="sampleHeader">Iterating:</p>
-                            <pre className="codeSample">
-                                <code>{dictIter}</code>
-                            </pre>
-                        </Row>
-                    </Col>
-                </Row>
+                <Tab.Container defaultActiveKey="lists">
+                    <Row>
+                        <Col md={3} lg={2}>
+                            <Nav variant="pills" className="flex-column">
+                                <Nav.Item>
+                                    <Nav.Link className="customPill" eventKey="lists">Lists</Nav.Link>
+                                </Nav.Item>
+                                <Nav.Item>
+                                    <Nav.Link className="customPill" eventKey="dicts">Dicts</Nav.Link>
+                                </Nav.Item>
+                            </Nav>
+                        </Col>
+                        <Col md={9} lg={10}>
+                            <Tab.Content>
+                                <Tab.Pane eventKey="lists">
+                                    <h3 className="pageHeading">
+                                        Lists:
+                                    </h3>
+                                    <Row>
+                                        <Col lg={6}>
+                                            <Row>
+                                                <p className="sampleHeader">Basics:</p>
+                                                <pre className="codeSample">
+                                                    <code>{listSample}</code>
+                                                </pre>
+                                            </Row>
+                                            <Row>
+                                                <p className="sampleHeader">Methods:</p>
+                                                <pre className="codeSample">
+                                                    <code>{listMethods}</code>
+                                                </pre>
+                                            </Row>
+                                            <Row>
+                                                <p className="sampleHeader">Slicing:</p>
+                                                <pre className="codeSample">
+                                                    <code>{listSlicing}</code>
+                                                </pre>
+                                            </Row>
+                                        </Col>
+                                        <Col lg={6}>
+                                            <Row>
+                                                <p className="sampleHeader">Iterating:</p>
+                                                <pre className="codeSample">
+                                                    <code>{listIterate}</code>
+                                                </pre>
+                                            </Row>
+                                            <Row>
+                                                <p className="sampleHeader">Map/Filter/Reduce:</p>
+                                                <pre className="codeSample">
+                                                    <code>{listmfr}</code>
+                                                </pre>
+                                            </Row>
+                                        </Col>
+                                    </Row>
+                                </Tab.Pane>
+                                <Tab.Pane eventKey="dicts">
+                                    <h3 className="pageHeading">Dicts:</h3>
+                                    <Row>
+                                        <Col lg={6}>
+                                            <Row>
+                                                <p className="sampleHeader">Basics:</p>
+                                                <pre className="codeSample">
+                                                    <code>{dictSample}</code>
+                                                </pre>
+                                            </Row>
+                                        </Col>
+                                        <Col lg={6}>
+                                            <Row>
+                                                <p className="sampleHeader">Iterating:</p>
+                                                <pre className="codeSample">
+                                                    <code>{dictIter}</code>
+                                                </pre>
+                                            </Row>
+                                        </Col>
+                                    </Row>
+                                </Tab.Pane>
+                            </Tab.Content>
+                        </Col>
+                    </Row>
+                </Tab.Container>
             </Container>
         </div>
     )

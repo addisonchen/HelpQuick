@@ -10,11 +10,11 @@ export default function Python() {
             <div className="innerPageContainer">
                 <Container fluid>
                     <Row>
-                        <h3 className="pageSubtitle">Fundamentals</h3>
+                        <h3 className="pageSubtitle">Languages</h3>
 
                     </Row>
                     <Row>
-                        <h1 className="pageTitle">Object Oriented Programming</h1>
+                        <h1 className="pageTitle">Python</h1>
                     </Row>
                     <Row>
                         <div className="rowPadder"></div>

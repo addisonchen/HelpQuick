@@ -19,7 +19,7 @@ export default function Pillars() {
                         <h3 className="pageHeading">Inheritance</h3>
                         <ul>
                             <li>Subclasses <span className="underline">copy and extend</span> properties of a parent class</li>
-                            <li>Parent class is specific</li>
+                            <li>Parent class is generic</li>
                             <li>Child class is specific</li>
                             <li>Allows code to be resusable</li>
                         </ul>
