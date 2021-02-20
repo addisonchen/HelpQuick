@@ -17,23 +17,25 @@ export default function Home() {
                         </Row>
                         <Row className="ninetyRow">
                             <Col span={6} style={{height: "100%", padding: "0px"}}>
+                                {/*
+                                <div className="linkContainer right">
+                                    <a href="/Python" className="homeLink">
+                                        <h3 className="linkText">Javascript</h3>
+                                    </a>
+                                </div>*/}
+                            </Col>
+                            <Col span={6} style={{padding: "0px"}}>
                                 <div className="linkContainer right">
                                     <a href="/Python" className="homeLink">
                                         <h3 className="linkText">Python</h3>
                                     </a>
                                 </div>
-                            </Col>
-                            <Col span={6} style={{padding: "0px"}}>
-                                <div className="linkContainer right">
-                                    <a href="/Python" className="homeLink">
-                                        <h3 className="linkText">JavaScript</h3>
-                                    </a>
-                                </div>
+                                {/*
                                 <div className="linkContainer right">
                                     <a href="/Python" className="homeLink">
                                         <h3 className="linkText">Swift</h3>
                                     </a>
-                                </div>
+                                </div>*/}
 
                             </Col>
                         </Row>
@@ -43,10 +45,12 @@ export default function Home() {
                     <Col span={6}>
                         <Row className="ninetyRow">
                             <Col span={6} style={{height: "100%", padding: "0px"}}>
-                                <div className="linkContainer left">
+                                {/*<div className="linkContainer left">
                                     <a href="/OOP" className="homeLink">
                                         <h3 className="linkText">Database</h3>
                                     </a>
+                                </div>*/}
+                                <div className="linkContainer left empty">
                                 </div>
                                 <div className="linkContainer left">
                                     <a href="/algorithms" className="homeLink">

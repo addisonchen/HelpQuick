@@ -26,11 +26,12 @@ export default function Algorithms() {
                                     <Graphs />
                                 </div>
                             </Tab>
+                            {/*}
                             <Tab eventKey="sorting" title="Sorting">
                                 <div className="tabContainer">
                                     <Sorting />
                                 </div>
-                            </Tab>
+                            </Tab>*/}
                         </Tabs>
                     </Row>
                 </Container>
