@@ -46,8 +46,8 @@ export default function Home() {
                         <Row className="ninetyRow">
                             <Col span={6} style={{height: "100%", padding: "0px"}}>
                                 {/*<div className="linkContainer left">
-                                    <a href="/OOP" className="homeLink">
-                                        <h3 className="linkText">Database</h3>
+                                    <a href="/Web" className="homeLink">
+                                        <h3 className="linkText">Web</h3>
                                     </a>
                                 </div>*/}
                                 <div className="linkContainer left empty">
