@@ -3,6 +3,7 @@ import { Container, Row, Tabs, Tab } from 'react-bootstrap';
 
 import Overview from './python/Overview';
 import DataStructures from './python/DataStructures';
+import Classes from './python/Classes';
 
 export default function Python() {
     return (
@@ -33,7 +34,7 @@ export default function Python() {
                             </Tab>
                             <Tab eventKey="classes" title="Classes">
                                 <div className="tabContainer">
-                                    yo
+                                    <Classes />
                                 </div>
                             </Tab>
                         </Tabs>

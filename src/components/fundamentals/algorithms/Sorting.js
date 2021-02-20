@@ -4,19 +4,19 @@ import { Container, Row, Col, Tab, Nav} from 'react-bootstrap';
 import bfs from './bfs.png';
 import dfs from './dfs.png';
 
-export default function Graphs() {
+export default function Sorting() {
     return (
         <div>
             <Container>
                 <Row>
                     <h2 className="tabHeading">Graph Algorithms</h2>
                 </Row>
-                <Tab.Container defaultActiveKey="bfs">
+                <Tab.Container defaultActiveKey="heap">
                     <Row>
                         <Col md={3} lg={2}>
                             <Nav variant="pills" className="flex-column">
                                 <Nav.Item>
-                                    <Nav.Link className="customPill" eventKey="bfs">BFS</Nav.Link>
+                                    <Nav.Link className="customPill" eventKey="heap">Heap Sort</Nav.Link>
                                 </Nav.Item>
                                 <Nav.Item>
                                     <Nav.Link className="customPill" eventKey="dfs">DFS</Nav.Link>
@@ -25,13 +25,13 @@ export default function Graphs() {
                         </Col>
                         <Col md={9} lg={10}>
                             <Tab.Content>
-                                <Tab.Pane eventKey="bfs">
+                                <Tab.Pane eventKey="heap">
                                     <Row>
                                         <Col lg={7}>
                                             <img src={bfs} alt="BFS on a tree" style={{width: "100%"}} />
                                         </Col>
                                         <Col lg={5}>
-                                            <h3 className="pageHeading">Breadth First Search</h3>
+                                            <h3 className="pageHeading">Heap Sort</h3>
                                             <p>BFS goes through a graph layer by layer, checking nodes of equal distance from the root node before moving to the next layer</p>
                                             <h3 className="pageHeading">Algorithm:</h3>
                                             <ul>

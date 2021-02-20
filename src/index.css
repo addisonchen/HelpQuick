@@ -294,6 +294,34 @@ ul li::marker {
   padding-bottom: 25px;
 }
 
+.menuOuterContainer {
+  position: absolute;
+  top: 0px;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.menuContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  width: 100%;
+  max-width: 1150px;
+  padding: 25px;
+  padding-top: 50px
+
+}
+
+#menuIcon {
+  transition: 0.2s ease-in-out;
+}
+
+#menuIcon:hover {
+  transform: scale(1.1);
+}
+
 .innerPageContainer {
   width: 100%;
   max-width: 1150px;

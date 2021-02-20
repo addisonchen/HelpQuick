@@ -1,6 +1,8 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 
+import basicUML from './basicUML.png';
+
 export default function Overview() {
     return (
         <div>
@@ -25,6 +27,11 @@ export default function Overview() {
                         <p>
                             Objects instantiated from classes remember specified values (fields), and can utilize the methods defined in the class.
                         </p>
+                        <div style={{height: "50px"}}></div>
+                        <h3 className="pageHeading">
+                            Basic UML
+                        </h3>
+                        <img src={basicUML} alt="a basic UML diagram" style={{width: "100%"}} />
                     </Col>
 
                     <Col md={6}>

@@ -1,7 +1,8 @@
 import React from 'react';
 import { Container, Row, Tabs, Tab } from 'react-bootstrap';
 
-import Graphs from './algorithms/Graphs'
+import Graphs from './algorithms/Graphs';
+import Sorting from './algorithms/Sorting';
 
 export default function Algorithms() {
     return (
@@ -25,24 +26,9 @@ export default function Algorithms() {
                                     <Graphs />
                                 </div>
                             </Tab>
-                            <Tab eventKey="linkedlists" title="Linked Lists">
-                                <div className="tabContainer">
-                                </div>   
-                            </Tab>
-                            <Tab eventKey="dynamicprogramming" title="Dynamic Programming">
-                                <div className="tabContainer">
-                                </div>
-                            </Tab>
                             <Tab eventKey="sorting" title="Sorting">
                                 <div className="tabContainer">
-                                </div>
-                            </Tab>
-                            <Tab eventKey="searching" title="Searching">
-                                <div className="tabContainer">
-                                </div>
-                            </Tab>
-                            <Tab eventKey="trees" title="Trees">
-                                <div className="tabContainer">
+                                    <Sorting />
                                 </div>
                             </Tab>
                         </Tabs>
