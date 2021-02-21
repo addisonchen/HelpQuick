@@ -1,5 +1,6 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
+import { Link } from "react-router-dom";
 
 export default function Home() {
     return (
@@ -26,9 +27,9 @@ export default function Home() {
                             </Col>
                             <Col span={6} style={{padding: "0px"}}>
                                 <div className="linkContainer right">
-                                    <a href="/Python" className="homeLink">
+                                    <Link to='/python' className="homeLink">
                                         <h3 className="linkText">Python</h3>
-                                    </a>
+                                    </Link>
                                 </div>
                                 {/*
                                 <div className="linkContainer right">
@@ -53,18 +54,18 @@ export default function Home() {
                                 <div className="linkContainer left empty">
                                 </div>
                                 <div className="linkContainer left">
-                                    <a href="/algorithms" className="homeLink">
+                                    <Link to='/algorithms' className="homeLink">
                                         <h3 className="linkText">Algorithms</h3>
-                                    </a>
+                                    </Link>
                                 </div>
                             </Col>
                             <Col span={6} style={{padding: "0px"}}>
                                 <div className="linkContainer left empty">
                                 </div>
                                 <div className="linkContainer left">
-                                    <a href="/OOP" className="homeLink">
+                                    <Link to='/OOP' className="homeLink">
                                         <h3 className="linkText">OOP</h3>
-                                    </a>
+                                    </Link>
                                 </div>
                             </Col>
                         </Row>

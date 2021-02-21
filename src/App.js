@@ -13,25 +13,25 @@ import Python from './components/languages/Python';
 
 function App() {
   return (
-    <Router>
-      <Route exact path="/" render={props => (
+    <Router basename="/quickhelp">
+      <Route exact path='/' render={props => (
         <React.Fragment>
           <Home />
         </React.Fragment>
       )} />
-      <Route exact path="/OOP" render={props => (
+      <Route path='/OOP' render={props => (
         <React.Fragment>
           <OOP />
           <Menu />
         </React.Fragment>
       )} />
-      <Route exact path="/algorithms" render={props => (
+      <Route path='/algorithms' render={props => (
         <React.Fragment>
           <Algorithms />
           <Menu />
         </React.Fragment>
       )} />
-      <Route exact path="/python" render={props => (
+      <Route path='/python' render={props => (
         <React.Fragment>
           <Python />
           <Menu />
