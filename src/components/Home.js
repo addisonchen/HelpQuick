@@ -74,25 +74,29 @@ export default function Home() {
                         </Row>
                     </Col>
                     <Col span={6} style={{padding: "0px"}}>
-                        <h1 className="subTitle">Coding Reference Guide</h1>
+                        <h1 className="subTitle">Coding Reference <span className="light">2021</span>Guide</h1>
                     </Col>
                 </Row>
                 <Row>
-                    <div style={{height: "150px"}}></div>
+                    <div style={{height: "100px"}}></div>
+                </Row>
+                <hr></hr>
+                <Row>
+                    <div style={{height: "100px"}}></div>
                 </Row>
                 <Row>
-                    <Col lg={4}>
+                    <Col xs={4}>
                         <div className="smallTitleOuterContainer">
                             <div className="smallTitleContainer">
                                 <h4 className="smallTitle">So you...</h4>
                             </div>
                         </div>
                     </Col>
-                    <Col lg={8}>
+                    <Col xs={8}>
                         <div className="aboutContainer">
-                            <p className="aboutFont">Have experience but need a quick refresher before an interview?</p>
-                            <p className="aboutFont">Forgot how to create a list one language you used years ago?</p>
-                            <p className="aboutFont">Want to implement a common algorithm in your project?</p>
+                            <p className="aboutFont">😱 Are freaking out before a technical interview?</p>
+                            <p className="aboutFont">🤷‍♂️ Forgot how to create a list in a language you used years ago?</p>
+                            <p className="aboutFont">🤔 Want to implement a common algorithm in your project?</p>
                         </div>
                     </Col>
                 </Row>
@@ -100,14 +104,14 @@ export default function Home() {
                     <div style={{height: "100px"}}></div>
                 </Row>
                 <Row>
-                    <Col lg={8}>
+                    <Col xs={8}>
                         <div className="aboutContainer left">
-                            <p className="aboutFont left">Overviews of different cs fundamentals</p>
-                            <p className="aboutFont left">Syntax basics for common languages</p>
-                            <p className="aboutFont left">Common methods for different data types</p>
+                            <p className="aboutFont left">Overviews of different cs fundamentals ✅</p>
+                            <p className="aboutFont left">Syntax basics for common languages ✅</p>
+                            <p className="aboutFont left">Common methods for different data types ✅</p>
                         </div>
                     </Col>
-                    <Col lg={4}>
+                    <Col xs={4}>
                         <div className="smallTitleOuterContainer right">
                             <div className="smallTitleContainer">
                                 <h4 className="smallTitle">We got you!</h4>
@@ -117,6 +121,29 @@ export default function Home() {
                 </Row>
                 <Row>
                     <div style={{height: "100px"}}></div>
+                </Row>
+                <hr></hr>
+                <Row>
+                    <div style={{height: "100px"}}></div>
+                </Row>
+                <Row>
+                    <div className="aboutUsOuterContainer">
+                        <div className="aboutUsContainer">
+                            <h2 className="tabHeading">Who We Are</h2>
+                            <div style={{height: "50px"}}></div>
+                            <h3 className="pageHeading">Our Goal</h3>
+                            <p className="textCenter">We want to provide developers with a resource to answer quick, simple questions related to current technologies and design patterns. Sometimes turning to StackOverflow is overkill and finding brief overviews on important topics is hard!</p>
+                            <div style={{height: "25px"}}></div>
+                            <h3 className="pageHeading">Students for Students</h3>
+                            <p className="textCenter">The quick coding reference guide was developed for students, by students.</p>
+                            <div style={{height: "25px"}}></div>
+                            <h3 className="pageHeading">Human Developers</h3>
+                            <p className="textCenter">We have all hit road blocks in projects and interviews, we started this project because we need it too!</p>
+                        </div>
+                    </div>
+                </Row>
+                <Row>
+                    <div style={{height: "200px"}}></div>
                 </Row>
             </Container>
         </div>

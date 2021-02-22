@@ -216,7 +216,35 @@ ul li::marker {
   line-height: 1;
   text-align: center;
   color: white;
+  overflow-y: hidden;
 }
+
+.aboutUsContainer {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+/*
+.aboutUsOuterContainer {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}*/
+
+.textCenter {
+  max-width: 600px;
+  text-align: center;
+}
+
+.light {
+  color: rgb(245, 245, 245);
+}
+
+
 /*
 @media only screen and (max-width: 768px) {
   .linkContainer.empty {
@@ -361,7 +389,7 @@ ul li::marker {
   font-family: forma-djr-banner, sans-serif;
   font-weight: 700;
   font-style: normal;
-  font-size: 30px;;
+  font-size: 30px;
   line-height: 1.1;
   padding: 15px;
 }
