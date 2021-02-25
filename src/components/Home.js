@@ -18,12 +18,12 @@ export default function Home() {
                         </Row>
                         <Row className="ninetyRow">
                             <Col span={6} style={{height: "100%", padding: "0px"}}>
-                                {/*
+                                
                                 <div className="linkContainer right">
-                                    <a href="/Python" className="homeLink">
-                                        <h3 className="linkText">Javascript</h3>
+                                    <a href="/swift" className="homeLink">
+                                        <h3 className="linkText">Swift</h3>
                                     </a>
-                                </div>*/}
+                                </div>
                             </Col>
                             <Col span={6} style={{padding: "0px"}}>
                                 <div className="linkContainer right">

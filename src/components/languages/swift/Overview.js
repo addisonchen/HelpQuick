@@ -3,28 +3,32 @@ import { Container, Row, Col } from 'react-bootstrap';
 
 export default function Overview() {
 
-    let helloWorld = `# This is an inline comment
+    let helloWorld = `// This is an inline comment
 print('Hello World!')`;
 
-    let ifSample = ` # boolean operators: and, or, not, ==, !=, >, <
-if x:
-   this line is tabbed over
-elif y:
-    python defines blocks with tabs
-else:
-    blocks start with a ":"`;
+    let ifSample = `// boolean operators: &&, ||, !, ==, !=, >, <
+if x < y {
+    print("x is less than y")
+} else if y > x {
+    print("Wrap blocks in {}, but lines dont end with ;")
+}
+else {
+    print("y == x")
+}`;
 
-    let whileSample = `while x:
-    do this until x is False`;
+    let whileSample = `while l < r {
+    print("do this until l >= r")
+}`;
 
-    let forSample = `for idx, num in enumerate([1, 2, 3]):
-    print('idx is: ' + str(idx) + " num is: " + str(num))`;
-
+    let forSample = `var nums = [1, 2, 3]
+for (idx, num) in nums.enumerated() {
+    print("idx is: \\(idx) num is: \\(num)")
+}`;
     return (
         <div>
             <Container>
                 <Row>
-                    <h2 className="tabHeading">Overview of Python</h2>
+                    <h2 className="tabHeading">Overview of Swift</h2>
                 </Row>
                 <Row>
                     <Col md={6}>
@@ -32,7 +36,7 @@ else:
                             Background:
                         </h3>
                         <p>
-                            Python is characterized by it's simple syntax. It is easy to learn and can make application development quick. It is popular as a support language for build control, management, and testing as well as for data modelling and analytics
+                            Developed by Apple in 2014 (and now open-source), Swift was intended to replace Objective-C as the language used for iOS development. It was designed to promote safety and speed, while also being easier to use than C languages.
                         </p>
                         <h3 className="pageHeading">
                             Basic Syntax:
@@ -63,37 +67,34 @@ else:
                         <h3 className="pageHeading">Attributes:</h3>
                         <ul>
                             <li>
-                                Dynamically typed
+                                Statically typed
                             </li>
                             <li>
                                 Strongly typed
                             </li>
                             <li>
-                                Interpreted
+                                Compiled
                             </li>
                             <li>
-                                Object-Oriented
+                                Mulit-paradigm
                             </li>
                         </ul>
                         <h3 className="pageHeading">Data Types:</h3>
                         <ul>
                             <li>
-                                String: str
+                                String: String
                             </li>
                             <li>
-                                Number: int, float, complex
+                                Number: Int, Float, Double
                             </li>
                             <li>
-                                Sequence: list, tuple, range
+                                Sequence: Array, Tuple, Set
                             </li>
                             <li>
-                                Mapping: dict
+                                Mapping: Dictionary
                             </li>
                             <li>
-                                Boolean: bool
-                            </li>
-                            <li>
-                                Binary: bytes, bytearray, memoryview
+                                Boolean: Bool
                             </li>
                         </ul>
                     </Col>

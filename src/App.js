@@ -10,6 +10,7 @@ import Algorithms from './components/fundamentals/Algorithms';
 
 
 import Python from './components/languages/Python';
+import Swift from './components/languages/Swift';
 
 function App() {
   return (
@@ -34,6 +35,12 @@ function App() {
       <Route path='/python' render={props => (
         <React.Fragment>
           <Python />
+          <Menu />
+        </React.Fragment>
+      )} />
+      <Route path='/swift' render={props => (
+        <React.Fragment>
+          <Swift />
           <Menu />
         </React.Fragment>
       )} />
