@@ -1,6 +1,12 @@
 import React from 'react';
 import { Container, Row, Col, Nav, Tab } from 'react-bootstrap';
 
+import { Light as SyntaxHighlighter } from 'react-syntax-highlighter';
+import python from 'react-syntax-highlighter/dist/esm/languages/hljs/python';
+import { stackoverflowLight } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+
+SyntaxHighlighter.registerLanguage('python', python);
+
 export default function DataStructures() {
 
     let listSample = `# creating an empty list
@@ -69,7 +75,7 @@ emptyDict = {}
 filledDict = {'joe': 12, 'abby': 3, 'derek': 5}
 
 # get values
-filledDict['joe] -> 12
+filledDict['joe'] -> 12
 
 # add key-value pairs
 filledDict['julia'] = 7
@@ -113,35 +119,35 @@ for key, val in filledDict.items():
                                         <Col lg={6}>
                                             <Row>
                                                 <p className="sampleHeader">Basics:</p>
-                                                <pre className="codeSample">
-                                                    <code>{listSample}</code>
-                                                </pre>
+                                                <SyntaxHighlighter language="python" style={stackoverflowLight} className="codeSample">
+                                                    {listSample}
+                                                </SyntaxHighlighter>
                                             </Row>
                                             <Row>
                                                 <p className="sampleHeader">Methods:</p>
-                                                <pre className="codeSample">
-                                                    <code>{listMethods}</code>
-                                                </pre>
+                                                <SyntaxHighlighter language="python" style={stackoverflowLight} className="codeSample">
+                                                    {listMethods}
+                                                </SyntaxHighlighter>
                                             </Row>
                                             <Row>
                                                 <p className="sampleHeader">Slicing:</p>
-                                                <pre className="codeSample">
-                                                    <code>{listSlicing}</code>
-                                                </pre>
+                                                <SyntaxHighlighter language="python" style={stackoverflowLight} className="codeSample">
+                                                    {listSlicing}
+                                                </SyntaxHighlighter>
                                             </Row>
                                         </Col>
                                         <Col lg={6}>
                                             <Row>
                                                 <p className="sampleHeader">Iterating:</p>
-                                                <pre className="codeSample">
-                                                    <code>{listIterate}</code>
-                                                </pre>
+                                                <SyntaxHighlighter language="python" style={stackoverflowLight} className="codeSample">
+                                                    {listIterate}
+                                                </SyntaxHighlighter>
                                             </Row>
                                             <Row>
                                                 <p className="sampleHeader">Map/Filter/Reduce:</p>
-                                                <pre className="codeSample">
-                                                    <code>{listmfr}</code>
-                                                </pre>
+                                                <SyntaxHighlighter language="python" style={stackoverflowLight} className="codeSample">
+                                                    {listmfr}
+                                                </SyntaxHighlighter>
                                             </Row>
                                         </Col>
                                     </Row>
@@ -152,17 +158,17 @@ for key, val in filledDict.items():
                                         <Col lg={6}>
                                             <Row>
                                                 <p className="sampleHeader">Basics:</p>
-                                                <pre className="codeSample">
-                                                    <code>{dictSample}</code>
-                                                </pre>
+                                                <SyntaxHighlighter language="python" style={stackoverflowLight} className="codeSample">
+                                                    {dictSample}
+                                                </SyntaxHighlighter>
                                             </Row>
                                         </Col>
                                         <Col lg={6}>
                                             <Row>
                                                 <p className="sampleHeader">Iterating:</p>
-                                                <pre className="codeSample">
-                                                    <code>{dictIter}</code>
-                                                </pre>
+                                                <SyntaxHighlighter language="python" style={stackoverflowLight} className="codeSample">
+                                                    {dictIter}
+                                                </SyntaxHighlighter>
                                             </Row>
                                         </Col>
                                     </Row>
@@ -172,6 +178,7 @@ for key, val in filledDict.items():
                     </Row>
                 </Tab.Container>
             </Container>
+            <div style={{height: '100px'}}></div>
         </div>
     )
 }

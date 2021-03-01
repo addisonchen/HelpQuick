@@ -416,7 +416,6 @@ ul li::marker {
   position: relative;
   border-radius: 5px;
   border: 1px solid rgb(207, 207, 207);
-  background-color: rgb(240, 240, 240);
 }
 
 .row .codeSample, .sampleHeader {
@@ -428,4 +427,8 @@ ul li::marker {
   margin-bottom: -5px;
 }
 
+
+.highlightText {
+  color: #FF3864;
+}
 

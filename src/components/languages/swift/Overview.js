@@ -1,18 +1,29 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 
+import { Light as SyntaxHighlighter } from 'react-syntax-highlighter';
+import swift from 'react-syntax-highlighter/dist/esm/languages/hljs/swift';
+import { stackoverflowLight } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+
+SyntaxHighlighter.registerLanguage('swift', swift);
+
 export default function Overview() {
 
     let helloWorld = `// This is an inline comment
-print('Hello World!')`;
+print("Hello World!")
+
+// declare a variable
+var myVar = "hey!"
+
+// declare a constant
+let myConstant = 3`;
 
     let ifSample = `// boolean operators: &&, ||, !, ==, !=, >, <
 if x < y {
     print("x is less than y")
 } else if y > x {
     print("Wrap blocks in {}, but lines dont end with ;")
-}
-else {
+} else {
     print("y == x")
 }`;
 
@@ -42,24 +53,24 @@ for (idx, num) in nums.enumerated() {
                             Basic Syntax:
                         </h3>
                         <Row>
-                            <pre className="codeSample">
-                                <code>{helloWorld}</code>
-                            </pre>
+                            <SyntaxHighlighter language="swift" style={stackoverflowLight} className="codeSample">
+                                {helloWorld}
+                            </SyntaxHighlighter>
                         </Row>
                         <Row>
-                            <pre className="codeSample">
-                                <code>{ifSample}</code>
-                            </pre>
+                            <SyntaxHighlighter language="swift" style={stackoverflowLight} className="codeSample">
+                                {ifSample}
+                            </SyntaxHighlighter>
                         </Row>
                         <Row>
-                            <pre className="codeSample">
-                                <code>{whileSample}</code>
-                            </pre>
+                            <SyntaxHighlighter language="swift" style={stackoverflowLight} className="codeSample">
+                                {whileSample}
+                            </SyntaxHighlighter>
                         </Row>
                         <Row>
-                            <pre className="codeSample">
-                                <code>{forSample}</code>
-                            </pre>
+                            <SyntaxHighlighter language="swift" style={stackoverflowLight} className="codeSample">
+                                {forSample}
+                            </SyntaxHighlighter>
                         </Row>
                     </Col>
 
@@ -76,7 +87,7 @@ for (idx, num) in nums.enumerated() {
                                 Compiled
                             </li>
                             <li>
-                                Mulit-paradigm
+                                Multi-paradigm
                             </li>
                         </ul>
                         <h3 className="pageHeading">Data Types:</h3>
@@ -100,6 +111,7 @@ for (idx, num) in nums.enumerated() {
                     </Col>
                 </Row>
             </Container>
+            <div style={{height: '100px'}}></div>
         </div>
     )
 }

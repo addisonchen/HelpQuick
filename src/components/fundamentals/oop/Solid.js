@@ -39,6 +39,7 @@ export default function Solid() {
                     </Col>
                 </Row>
             </Container>
+            <div style={{height: '100px'}}></div>
         </div>
     )
 }

@@ -41,6 +41,7 @@ export default function Pillars() {
                     </Col>
                 </Row>
             </Container>
+            <div style={{height: '100px'}}></div>
         </div>
     )
 }

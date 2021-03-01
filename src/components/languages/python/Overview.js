@@ -1,6 +1,12 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 
+import { Light as SyntaxHighlighter } from 'react-syntax-highlighter';
+import python from 'react-syntax-highlighter/dist/esm/languages/hljs/python';
+import { stackoverflowLight } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+
+SyntaxHighlighter.registerLanguage('python', python);
+
 export default function Overview() {
 
     let helloWorld = `# This is an inline comment
@@ -38,24 +44,24 @@ else:
                             Basic Syntax:
                         </h3>
                         <Row>
-                            <pre className="codeSample">
-                                <code>{helloWorld}</code>
-                            </pre>
+                            <SyntaxHighlighter language="python" style={stackoverflowLight} className="codeSample">
+                                {helloWorld}
+                            </SyntaxHighlighter>
                         </Row>
                         <Row>
-                            <pre className="codeSample">
-                                <code>{ifSample}</code>
-                            </pre>
+                            <SyntaxHighlighter language="python" style={stackoverflowLight} className="codeSample">
+                                {ifSample}
+                            </SyntaxHighlighter>
                         </Row>
                         <Row>
-                            <pre className="codeSample">
-                                <code>{whileSample}</code>
-                            </pre>
+                            <SyntaxHighlighter language="python" style={stackoverflowLight} className="codeSample">
+                                {whileSample}
+                            </SyntaxHighlighter>
                         </Row>
                         <Row>
-                            <pre className="codeSample">
-                                <code>{forSample}</code>
-                            </pre>
+                            <SyntaxHighlighter language="python" style={stackoverflowLight} className="codeSample">
+                                {forSample}
+                            </SyntaxHighlighter>
                         </Row>
                     </Col>
 
@@ -99,6 +105,7 @@ else:
                     </Col>
                 </Row>
             </Container>
+            <div style={{height: '100px'}}></div>
         </div>
     )
 }

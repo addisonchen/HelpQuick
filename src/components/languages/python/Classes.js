@@ -1,6 +1,12 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 
+import { Light as SyntaxHighlighter } from 'react-syntax-highlighter';
+import python from 'react-syntax-highlighter/dist/esm/languages/hljs/python';
+import { stackoverflowLight } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+
+SyntaxHighlighter.registerLanguage('python', python);
+
 export default function Overview() {
 
     let classes = `# creating a class with a field:
@@ -38,13 +44,14 @@ class MyClass:
                             Classes/Objects store data and methods
                         </p>
                         <Row>
-                            <pre className="codeSample">
-                                <code>{classes}</code>
-                            </pre>
+                            <SyntaxHighlighter language="python" style={stackoverflowLight} className="codeSample">
+                                {classes}
+                            </SyntaxHighlighter>
                         </Row>
                     </Col>
                 </Row>
             </Container>
+            <div style={{height: '100px'}}></div>
         </div>
     )
 }
