@@ -40,7 +40,7 @@ while (x < 10) {
 }`;
 
     let forSample = `var i;
-for (i = 0, i < 10, ++i) {
+for (i = 0; i < 10; ++i) {
     console.log('i is \${i}');
 }`;
 
