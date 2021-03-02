@@ -105,7 +105,7 @@ for (idx, num) in nums.enumerated() {
                                 Mapping: Dictionary
                             </li>
                             <li>
-                                Boolean: Bool
+                                Boolean: Bool (true, false)
                             </li>
                         </ul>
                     </Col>

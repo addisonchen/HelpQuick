@@ -96,7 +96,7 @@ else:
                                 Mapping: dict
                             </li>
                             <li>
-                                Boolean: bool
+                                Boolean: bool (True, False)
                             </li>
                             <li>
                                 Binary: bytes, bytearray, memoryview

@@ -84,40 +84,37 @@ for (i = 0, i < 10, ++i) {
                     </Col>
 
                     <Col md={6}>
-                        <h3 className="pageHeading">Attributes: (TODO)</h3>
+                        <h3 className="pageHeading">Attributes:</h3>
                         <ul>
                             <li>
                                 Dynamically typed
                             </li>
                             <li>
-                                Strongly typed
+                                Weakly typed
                             </li>
                             <li>
                                 Interpreted
                             </li>
                             <li>
-                                Object-Oriented
+                                Multi-paradigm
                             </li>
                         </ul>
-                        <h3 className="pageHeading">Data Types: (TODO)</h3>
+                        <h3 className="pageHeading">Data Types:</h3>
                         <ul>
                             <li>
-                                String: str
+                                String: String
                             </li>
                             <li>
-                                Number: int, float, complex
+                                Number: Number
                             </li>
                             <li>
-                                Sequence: list, tuple, range
+                                Sequence: Array, Set
                             </li>
                             <li>
-                                Mapping: dict
+                                Mapping: Object, Map
                             </li>
                             <li>
-                                Boolean: bool
-                            </li>
-                            <li>
-                                Binary: bytes, bytearray, memoryview
+                                Boolean: Boolean (true, false)
                             </li>
                         </ul>
                     </Col>
