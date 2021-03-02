@@ -9,63 +9,65 @@ SyntaxHighlighter.registerLanguage('js', js);
 
 export default function DataStructures() {
 
-    let listSample = `# creating an empty list
-emptyList = []
+    let listSample = `// creating an empty array
+let emptyArray = [];
 
-# List with things!
-filledList = [1, 2, 3]
+// Array with things!
+let filledArray = [1, 2, 3];
 
-# get item from the list
-filledList[0] -> first item
-filledList[-1] ->  last item`;
+// get item from the list
+filledArray[0] -> first item`;
 
-    let listMethods = `# add to list
-filledList.append(new item)
+    let listMethods = `// add to list
+filledArray.append(new item)
 
 # remove from list
-filledList.pop(optional idx, default -1)
+filledArray.pop(optional idx, default -1)
 
 # insert at index
-filledList.insert(index, item)
+filledArray.insert(index, item)
 
 # reverse the list
-filledList.reverse()
+filledArray.reverse()
 
 # clear the list
-filledList.clear()`;
+filledArray.clear()
+
+// concat
+let combined = filledArray.concat(emptyArray)`;
 
     let listSlicing = `# slicing!
-filledList[:] -> copy
-filledList[idx:] -> [idx ... rest of list]
-filledList[:idx] -> [1 ... up to idx-1]
-filledList[start:stop] -> [start ... stop-1]`;
+filledArray[:] -> copy
+filledArray[idx:] -> [idx ... rest of list]
+filledArray[:idx] -> [1 ... up to idx-1]
+filledArray[start:stop] -> [start ... stop-1]`;
     
     let listIterate = `# iterate over items
-for item in filledList:
+for item in filledArray:
     print(str(item))
 
 # iterate with index and item
-for i, item in enumerate(filledList):
+for i, item in enumerate(filledArray):
     print("i: " + str(i) + " item: " + str(item))
 
 # iterate with only indexes
-for i in range(len(filledList)):
+for i in range(len(filledArray)):
     print(str(i))
 
 # sorted and uniques only
-for filteredVal in sorted(set(filledList)):
+for filteredVal in sorted(set(filledArray)):
     print(str(filteredVal))
 `;
-    let listmfr = `myList = [1, 2, 3, 4, 5]
+    let listmfr = `myArray = [1, 2, 3, 4, 5]
 
 # map
 doubled = list(map(lambda x: x * 2, items))
 
 # filter
-odds = list(filter(lambda x: x % 2 != 0, myList))
+odds = list(filter(lambda x: x % 2 != 0, myArray))
 
 # reduce
-sum = reduce((lamda x, y: x + y), myList)
+sum = reduce((lamda x, y: x + y), myArray)
 `;
 
     let dictSample = `# empty dictionary
@@ -102,10 +104,10 @@ for key, val in filledDict.items():
                         <Col md={3} lg={2}>
                             <Nav variant="pills" className="flex-column">
                                 <Nav.Item>
-                                    <Nav.Link className="customPill" eventKey="lists">Lists</Nav.Link>
+                                    <Nav.Link className="customPill" eventKey="lists">Arrays</Nav.Link>
                                 </Nav.Item>
                                 <Nav.Item>
-                                    <Nav.Link className="customPill" eventKey="dicts">Dicts</Nav.Link>
+                                    <Nav.Link className="customPill" eventKey="dicts">Objects</Nav.Link>
                                 </Nav.Item>
                             </Nav>
                         </Col>
@@ -113,7 +115,7 @@ for key, val in filledDict.items():
                             <Tab.Content>
                                 <Tab.Pane eventKey="lists">
                                     <h3 className="pageHeading">
-                                        Lists:
+                                        Arrays:
                                     </h3>
                                     <Row>
                                         <Col lg={6}>
@@ -153,7 +155,7 @@ for key, val in filledDict.items():
                                     </Row>
                                 </Tab.Pane>
                                 <Tab.Pane eventKey="dicts">
-                                    <h3 className="pageHeading">Dicts:</h3>
+                                    <h3 className="pageHeading">Objects:</h3>
                                     <Row>
                                         <Col lg={6}>
                                             <Row>

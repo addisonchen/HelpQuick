@@ -10,65 +10,65 @@ SyntaxHighlighter.registerLanguage('swift', swift);
 export default function DataStructures() {
 
     let listSample = `// creating an empty list (specify type)
-var emptyList = [Int]()
+var emptyArray = [Int]()
 
-// List with things!
-var filledList = [1, 2, 3]
+// Array with things!
+var filledArray = [1, 2, 3]
 
 // get item from the list
-filledList[0] -> first item
+filledArray[0] -> first item
 
 // get list length
-let length = filledList.count`;
+let length = filledArray.count`;
 
     let listMethods = `// add to list
-filledList.append(new item)
+filledArray.append(new item)
 
 // remove last item
-let lastItem = filledList.removeLast()
+let lastItem = filledArray.removeLast()
 
 // remove from index
-let removedItem = filledList.remove(at: index)
+let removedItem = filledArray.remove(at: index)
 
 // insert at index
-filledList.insert(item, at: index)
+filledArray.insert(item, at: index)
 
 // reverse the list
-filledList.reversed()
+filledArray.reversed()
 
 // concat lists
-let combinedList = emptyList + filledList
+let combinedArray = emptyArray + filledArray
 
 // sort!
-filledList.sort()`;
+filledArray.sort()`;
 
     let listSlicing = `// slicing!
-let firstHalf = filledList[...<midpoint]
-let secondHalf = filledList[midpoint...]`;
+let firstHalf = filledArray[...<midpoint]
+let secondHalf = filledArray[midpoint...]`;
     
     let listIterate = `// iterate over items
-for item in filledList {
+for item in filledArray {
     print(item)
 }
 
 // iterate with index and item
-for (idx, item) in filledList.enumerated():
+for (idx, item) in filledArray.enumerated():
     print("i: \\(idx) item: \\(item)" )
 
 // iterate with only indexes
-for idx in 0...<filledList.count {
+for idx in 0...<filledArray.count {
     print("at idx: \\(idx)")
 }`;
-    let listmfr = `var myList = [1, 2, 3, 4, 5]
+    let listmfr = `var myArray = [1, 2, 3, 4, 5]
 
 // map
-let doubled = myList.map(num in num * 2)
+let doubled = myArray.map(num in num * 2)
 
 // filter
-let odds = myList.filter($0 % 2 != 0)
+let odds = myArray.filter($0 % 2 != 0)
 
 // reduce
-sum = myList.reduce(0, +)
+sum = myArray.reduce(0, +)
 `;
 
     let dictSample = `// empty dictionary
@@ -114,10 +114,10 @@ for key in filledDict.keys {
                         <Col md={3} lg={2}>
                             <Nav variant="pills" className="flex-column">
                                 <Nav.Item>
-                                    <Nav.Link className="customPill" eventKey="lists">Lists</Nav.Link>
+                                    <Nav.Link className="customPill" eventKey="lists">Arrays</Nav.Link>
                                 </Nav.Item>
                                 <Nav.Item>
-                                    <Nav.Link className="customPill" eventKey="dicts">Dicts</Nav.Link>
+                                    <Nav.Link className="customPill" eventKey="dicts">Dictionaries</Nav.Link>
                                 </Nav.Item>
                             </Nav>
                         </Col>
@@ -125,7 +125,7 @@ for key in filledDict.keys {
                             <Tab.Content>
                                 <Tab.Pane eventKey="lists">
                                     <h3 className="pageHeading">
-                                        Lists:
+                                        Arrays:
                                     </h3>
                                     <Row>
                                         <Col lg={6}>
@@ -165,7 +165,7 @@ for key in filledDict.keys {
                                     </Row>
                                 </Tab.Pane>
                                 <Tab.Pane eventKey="dicts">
-                                    <h3 className="pageHeading">Dicts:</h3>
+                                    <h3 className="pageHeading">Dictionaries:</h3>
                                     <Row>
                                         <Col lg={6}>
                                             <Row>
