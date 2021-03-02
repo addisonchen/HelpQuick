@@ -15,7 +15,7 @@ import JavaScript from './components/languages/JavaScript';
 
 function App() {
   return (
-    <Router basename="/quickhelp">
+    <Router>
       <Route exact path='/' render={props => (
         <React.Fragment>
           <Home />
