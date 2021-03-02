@@ -2,35 +2,53 @@ import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 
 import { Light as SyntaxHighlighter } from 'react-syntax-highlighter';
-import python from 'react-syntax-highlighter/dist/esm/languages/hljs/python';
+import js from 'react-syntax-highlighter/dist/esm/languages/hljs/javascript';
 import { stackoverflowLight } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 
-SyntaxHighlighter.registerLanguage('python', python);
+SyntaxHighlighter.registerLanguage('js', js);
 
 export default function Overview() {
 
-    let helloWorld = `# This is an inline comment
-print('Hello World!')`;
+    let helloWorld = `// This is an inline comment
+/* this is a block comment */
+console.log('Hello World!');
 
-    let ifSample = `# boolean operators: and, or, not, ==, !=, >, <
-if x:
-   this line is tabbed over
-elif y:
-    python defines blocks with tabs
-else:
-    blocks start with a ":"`;
+// function scoped variable
+var myInt = 1;
 
-    let whileSample = `while x:
-    do this until x is False`;
+// block scoped variable
+let myString = 'hello!';
 
-    let forSample = `for idx, num in enumerate([1, 2, 3]):
-    print('idx is: ' + str(idx) + " num is: " + str(num))`;
+// constant
+const myConst = 'this cant change';
+`;
+
+    let ifSample = `// boolean operators: &&, ||, !, ===, !==, >, <
+/* note that in js, === compares value and type, == only compares values */
+if (x < y) {    
+    console.log('x is less than y');
+} else if (x > y) {
+    console.log('x is greater than y');
+} else {
+    console.log('x equals y');
+}`;
+
+    let whileSample = `let x = 0
+while (x < 10) {
+    console.log(x);
+    x++;
+}`;
+
+    let forSample = `var i;
+for (i = 0, i < 10, ++i) {
+    console.log('i is \${i}');
+}`;
 
     return (
         <div>
             <Container>
                 <Row>
-                    <h2 className="tabHeading">Overview of Python</h2>
+                    <h2 className="tabHeading">Overview of JavaScript</h2>
                 </Row>
                 <Row>
                     <Col md={6}>
@@ -44,29 +62,29 @@ else:
                             Basic Syntax:
                         </h3>
                         <Row>
-                            <SyntaxHighlighter language="python" style={stackoverflowLight} className="codeSample">
+                            <SyntaxHighlighter language="js" style={stackoverflowLight} className="codeSample">
                                 {helloWorld}
                             </SyntaxHighlighter>
                         </Row>
                         <Row>
-                            <SyntaxHighlighter language="python" style={stackoverflowLight} className="codeSample">
+                            <SyntaxHighlighter language="js" style={stackoverflowLight} className="codeSample">
                                 {ifSample}
                             </SyntaxHighlighter>
                         </Row>
                         <Row>
-                            <SyntaxHighlighter language="python" style={stackoverflowLight} className="codeSample">
+                            <SyntaxHighlighter language="js" style={stackoverflowLight} className="codeSample">
                                 {whileSample}
                             </SyntaxHighlighter>
                         </Row>
                         <Row>
-                            <SyntaxHighlighter language="python" style={stackoverflowLight} className="codeSample">
+                            <SyntaxHighlighter language="js" style={stackoverflowLight} className="codeSample">
                                 {forSample}
                             </SyntaxHighlighter>
                         </Row>
                     </Col>
 
                     <Col md={6}>
-                        <h3 className="pageHeading">Attributes:</h3>
+                        <h3 className="pageHeading">Attributes: (TODO)</h3>
                         <ul>
                             <li>
                                 Dynamically typed
@@ -81,7 +99,7 @@ else:
                                 Object-Oriented
                             </li>
                         </ul>
-                        <h3 className="pageHeading">Data Types:</h3>
+                        <h3 className="pageHeading">Data Types: (TODO)</h3>
                         <ul>
                             <li>
                                 String: str

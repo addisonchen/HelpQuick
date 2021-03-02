@@ -31,13 +31,12 @@ export default function Home() {
                                         <h3 className="linkText">Python</h3>
                                     </Link>
                                 </div>
-                                {/*
+                                
                                 <div className="linkContainer right">
-                                    <a href="/Python" className="homeLink">
-                                        <h3 className="linkText">Swift</h3>
+                                    <a href="/javascript" className="homeLink">
+                                        <h3 className="linkText">JavaScript</h3>
                                     </a>
-                                </div>*/}
-
+                                </div>
                             </Col>
                         </Row>
                     </Col>
