@@ -80,6 +80,7 @@ export default function Graphs() {
                     </Row>
                 </Tab.Container>
             </Container>
+            <div style={{height: '100px'}}></div>
         </div>
     )
 }

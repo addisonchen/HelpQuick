@@ -9,89 +9,100 @@ SyntaxHighlighter.registerLanguage('js', js);
 
 export default function DataStructures() {
 
-    let listSample = `// creating an empty array
+    let arraySample = `// creating an empty array
 let emptyArray = [];
 
 // Array with things!
 let filledArray = [1, 2, 3];
 
-// get item from the list
-filledArray[0] -> first item`;
+// get item from the array
+filledArray[0]; -> first item`;
 
-    let listMethods = `// add to list
-filledArray.append(new item)
+    let arrayMethods = `// add to end ofarray
+filledArray.push(item1, ... , item n);
 
-# remove from list
-filledArray.pop(optional idx, default -1)
+// add to front of arra
+filledArray.unshift(item1, ... , item n);
 
-# insert at index
-filledArray.insert(index, item)
+// remove from end of array
+filledArray.pop();
 
-# reverse the list
-filledArray.reverse()
+// remove from front of array
+filledArray.shift();
 
-# clear the list
-filledArray.clear()
+// remove from array at index
+filledArray.splice(idx, how many);
+
+// reverse the array
+filledArray.reverse();
+
+// array length
+filledArray.length;
 
 // concat
-let combined = filledArray.concat(emptyArray)`;
+let combined = filledArray.concat(emptyArray);
 
-    let listSlicing = `# slicing!
-filledArray[:] -> copy
-filledArray[idx:] -> [idx ... rest of list]
-filledArray[:idx] -> [1 ... up to idx-1]
-filledArray[start:stop] -> [start ... stop-1]`;
-    
-    let listIterate = `# iterate over items
-for item in filledArray:
-    print(str(item))
+// sort
+filledArray.sort();`;
 
-# iterate with index and item
-for i, item in enumerate(filledArray):
-    print("i: " + str(i) + " item: " + str(item))
+    let arrayIterate = `// iterate over items with forEach()
+filledArray.forEach((item, idx) =>{
+    console.log('item: \${item} idx: \${idx}');
+});
 
-# iterate with only indexes
-for i in range(len(filledArray)):
-    print(str(i))
+// iterate over indexes with for loop
+var i;
+for (i = 0; i < filledArray.length; ++i) {
+    console.log('item: \${filledArray[idx]} idx: \${idx});
+}`;
+    let arraymfr = `myArray = [1, 2, 3, 4, 5]
 
-# sorted and uniques only
-for filteredVal in sorted(set(filledArray)):
-    print(str(filteredVal))
+// map
+let doubled = myArray.map(num => num * 2);
+
+// filter
+let odds = myArray.filter((val) => {
+    return val % 2 != 0;
+})
+
+// reduce
+let sum = myArray.reduce((acc, num) => {
+    return acc + num;
+}, 0)
+
+// every - true if func is true for all items
+let greaterThan3? = myArray.every((num) => {
+    return num > 3;
+})
 `;
-    let listmfr = `myArray = [1, 2, 3, 4, 5]
 
-# map
-doubled = list(map(lambda x: x * 2, items))
+    let dictSample = `// empty object
+emptyObj = {}
 
-# filter
-odds = list(filter(lambda x: x % 2 != 0, myArray))
+// Object with some stuff!
+filledObj = {'joe': 12, 'abby': 3, 'derek': 5};
 
-# reduce
-sum = reduce((lamda x, y: x + y), myArray)
-`;
+// get values
+filledObj['joe']; -> 12
 
-    let dictSample = `# empty dictionary
-emptyDict = {}
+// add key-value pairs
+filledObj['julia'] = 7;
 
-# dictionary with some stuff!
-filledDict = {'joe': 12, 'abby': 3, 'derek': 5}
+// remove key-value pairs
+delete filledObj['julia'];
 
-# get values
-filledDict['joe'] -> 12
+// check if key exists?
+'joe' in filledObj; -> True
+'mary' in filledObj; -> False`;
 
-# add key-value pairs
-filledDict['julia'] = 7
+    let dictIter = `// loop over keys
+Object.keys(filledObj).forEach((key) => {
+    console.log('key: \${key} val: \${filledObj[key]});
+})
 
-# remove key-value pairs
-del filledDict['julia']
-
-# check if key exists?
-'joe' in filledDict -> True
-'mary' in filledDict -> False`;
-
-    let dictIter = `# loop over keys and vals
-for key, val in filledDict.items():
-    print(key, val)`;
+for (const[key, val] of Object.entries(filledObject)) {
+    console.log(key, val);
+}`;
 
     return (
         <div>
@@ -99,12 +110,12 @@ for key, val in filledDict.items():
                 <Row>
                     <h2 className="tabHeading">Data Structures</h2>
                 </Row>
-                <Tab.Container defaultActiveKey="lists">
+                <Tab.Container defaultActiveKey="arrays">
                     <Row>
                         <Col md={3} lg={2}>
                             <Nav variant="pills" className="flex-column">
                                 <Nav.Item>
-                                    <Nav.Link className="customPill" eventKey="lists">Arrays</Nav.Link>
+                                    <Nav.Link className="customPill" eventKey="arrays">Arrays</Nav.Link>
                                 </Nav.Item>
                                 <Nav.Item>
                                     <Nav.Link className="customPill" eventKey="dicts">Objects</Nav.Link>
@@ -113,7 +124,7 @@ for key, val in filledDict.items():
                         </Col>
                         <Col md={9} lg={10}>
                             <Tab.Content>
-                                <Tab.Pane eventKey="lists">
+                                <Tab.Pane eventKey="arrays">
                                     <h3 className="pageHeading">
                                         Arrays:
                                     </h3>
@@ -122,19 +133,13 @@ for key, val in filledDict.items():
                                             <Row>
                                                 <p className="sampleHeader">Basics:</p>
                                                 <SyntaxHighlighter language="js" style={stackoverflowLight} className="codeSample">
-                                                    {listSample}
+                                                    {arraySample}
                                                 </SyntaxHighlighter>
                                             </Row>
                                             <Row>
                                                 <p className="sampleHeader">Methods:</p>
                                                 <SyntaxHighlighter language="js" style={stackoverflowLight} className="codeSample">
-                                                    {listMethods}
-                                                </SyntaxHighlighter>
-                                            </Row>
-                                            <Row>
-                                                <p className="sampleHeader">Slicing:</p>
-                                                <SyntaxHighlighter language="js" style={stackoverflowLight} className="codeSample">
-                                                    {listSlicing}
+                                                    {arrayMethods}
                                                 </SyntaxHighlighter>
                                             </Row>
                                         </Col>
@@ -142,13 +147,13 @@ for key, val in filledDict.items():
                                             <Row>
                                                 <p className="sampleHeader">Iterating:</p>
                                                 <SyntaxHighlighter language="js" style={stackoverflowLight} className="codeSample">
-                                                    {listIterate}
+                                                    {arrayIterate}
                                                 </SyntaxHighlighter>
                                             </Row>
                                             <Row>
                                                 <p className="sampleHeader">Map/Filter/Reduce:</p>
                                                 <SyntaxHighlighter language="js" style={stackoverflowLight} className="codeSample">
-                                                    {listmfr}
+                                                    {arraymfr}
                                                 </SyntaxHighlighter>
                                             </Row>
                                         </Col>

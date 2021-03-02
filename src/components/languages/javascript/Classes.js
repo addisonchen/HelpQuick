@@ -9,39 +9,53 @@ SyntaxHighlighter.registerLanguage('js', js);
 
 export default function Overview() {
 
-    let classes = `# creating a class with a field:
-class MyClass:
-    num = 3
-    
-# a class with a constructor:
-class MyClass:
-    
-    __init__(self, arg1 ... argn):
-        self.arg1 = arg1
-        ...
-        self.argn = argn
+    let classes = `// creating a class:
+class MyClass1 {
 
-# a class with functions!
-class MyClass:
+    constructor(value) {
+        this.val = value;
+    }
+}
 
-    num = 3
-
-    def increment(self):
-        self.num = self.num + 1
+let myObj1 = new MyClass1('hello!');
     
-    def setNum(self, newNum):
-        self.num = newNum`;
+// a class with a function:
+class MyClass2 {
+    constructor(value) {
+        this.val = value;
+    }
+
+    whatType() {
+        return typeof this.val
+    }
+}
+
+// extention!
+class MyClass3 extends myClass2 {
+
+    constructor(value, count) {
+        super(value);
+        this.count = count;
+    }
+
+    printCountTimes() {
+        var i;
+        for (i = 0; i < this.count; ++i) {
+            console.log(this.whatType());
+        }
+    }
+}`;
 
     return (
         <div>
             <Container>
                 <Row>
-                    <h2 className="tabHeading" style={{paddingLeft: "8vw", paddingRight: "8vw"}}>Classes in Python</h2>
+                    <h2 className="tabHeading" style={{paddingLeft: "8vw", paddingRight: "8vw"}}>Classes in JavaScript</h2>
                 </Row>
                 <Row>
                     <Col style={{paddingLeft: "8vw", paddingRight: "8vw"}}>
                         <p>
-                            Classes/Objects store data and methods
+                            Classes in JavaScript are basic, they are built on functions 
                         </p>
                         <Row>
                             <SyntaxHighlighter language="js" style={stackoverflowLight} className="codeSample">

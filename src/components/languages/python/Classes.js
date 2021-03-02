@@ -21,6 +21,9 @@ class MyClass:
         ...
         self.argn = argn
 
+myObj = MyClass(1, 2, ... , n)
+
+
 # a class with functions!
 class MyClass:
 

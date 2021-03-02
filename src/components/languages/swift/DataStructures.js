@@ -9,19 +9,19 @@ SyntaxHighlighter.registerLanguage('swift', swift);
 
 export default function DataStructures() {
 
-    let listSample = `// creating an empty list (specify type)
+    let arraySample = `// creating an empty array (specify type)
 var emptyArray = [Int]()
 
 // Array with things!
 var filledArray = [1, 2, 3]
 
-// get item from the list
+// get item from the array
 filledArray[0] -> first item
 
-// get list length
+// get array length
 let length = filledArray.count`;
 
-    let listMethods = `// add to list
+    let arrayMethods = `// add to array
 filledArray.append(new item)
 
 // remove last item
@@ -33,20 +33,20 @@ let removedItem = filledArray.remove(at: index)
 // insert at index
 filledArray.insert(item, at: index)
 
-// reverse the list
+// reverse the array
 filledArray.reversed()
 
-// concat lists
+// concat arrays
 let combinedArray = emptyArray + filledArray
 
 // sort!
 filledArray.sort()`;
 
-    let listSlicing = `// slicing!
+    let arraySlicing = `// slicing!
 let firstHalf = filledArray[...<midpoint]
 let secondHalf = filledArray[midpoint...]`;
     
-    let listIterate = `// iterate over items
+    let arrayIterate = `// iterate over items
 for item in filledArray {
     print(item)
 }
@@ -59,7 +59,7 @@ for (idx, item) in filledArray.enumerated():
 for idx in 0...<filledArray.count {
     print("at idx: \\(idx)")
 }`;
-    let listmfr = `var myArray = [1, 2, 3, 4, 5]
+    let arraymfr = `var myArray = [1, 2, 3, 4, 5]
 
 // map
 let doubled = myArray.map(num in num * 2)
@@ -109,12 +109,12 @@ for key in filledDict.keys {
                 <Row>
                     <h2 className="tabHeading">Data Structures</h2>
                 </Row>
-                <Tab.Container defaultActiveKey="lists">
+                <Tab.Container defaultActiveKey="arrays">
                     <Row>
                         <Col md={3} lg={2}>
                             <Nav variant="pills" className="flex-column">
                                 <Nav.Item>
-                                    <Nav.Link className="customPill" eventKey="lists">Arrays</Nav.Link>
+                                    <Nav.Link className="customPill" eventKey="arrays">Arrays</Nav.Link>
                                 </Nav.Item>
                                 <Nav.Item>
                                     <Nav.Link className="customPill" eventKey="dicts">Dictionaries</Nav.Link>
@@ -123,7 +123,7 @@ for key in filledDict.keys {
                         </Col>
                         <Col md={9} lg={10}>
                             <Tab.Content>
-                                <Tab.Pane eventKey="lists">
+                                <Tab.Pane eventKey="arrays">
                                     <h3 className="pageHeading">
                                         Arrays:
                                     </h3>
@@ -132,13 +132,13 @@ for key in filledDict.keys {
                                             <Row>
                                                 <p className="sampleHeader">Basics:</p>
                                                 <SyntaxHighlighter language="swift" style={stackoverflowLight} className="codeSample">
-                                                    {listSample}
+                                                    {arraySample}
                                                 </SyntaxHighlighter>
                                             </Row>
                                             <Row>
                                                 <p className="sampleHeader">Methods:</p>
                                                 <SyntaxHighlighter language="swift" style={stackoverflowLight} className="codeSample">
-                                                    {listMethods}
+                                                    {arrayMethods}
                                                 </SyntaxHighlighter>
                                             </Row>
                                         </Col>
@@ -146,19 +146,19 @@ for key in filledDict.keys {
                                             <Row>
                                                 <p className="sampleHeader">Slicing:</p>
                                                 <SyntaxHighlighter language="swift" style={stackoverflowLight} className="codeSample">
-                                                    {listSlicing}
+                                                    {arraySlicing}
                                                 </SyntaxHighlighter>
                                             </Row>
                                             <Row>
                                                 <p className="sampleHeader">Iterating:</p>
                                                 <SyntaxHighlighter language="swift" style={stackoverflowLight} className="codeSample">
-                                                    {listIterate}
+                                                    {arrayIterate}
                                                 </SyntaxHighlighter>
                                             </Row>
                                             <Row>
                                                 <p className="sampleHeader">Map/Filter/Reduce:</p>
                                                 <SyntaxHighlighter language="swift" style={stackoverflowLight} className="codeSample">
-                                                    {listmfr}
+                                                    {arraymfr}
                                                 </SyntaxHighlighter>
                                             </Row>
                                         </Col>

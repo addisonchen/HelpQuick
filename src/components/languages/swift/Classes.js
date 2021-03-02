@@ -25,7 +25,9 @@ class MyClass2 {
         self.myNum = myNum
         self.myString = myString
     }
-}`;
+}
+
+let MyObj = MyClass2(2, "dog")`;
 
     let classes3 = `// a class with functions!
 class MyClass3 {
